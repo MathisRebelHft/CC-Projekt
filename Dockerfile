@@ -9,8 +9,11 @@ COPY app /home/node/app
 
 # installs dependencies
 RUN npm install
-# starts script definded in package.json (>node index.js)
-CMD npm run app
 
+
+ENV PORT=9999
 # expose port 9999
 EXPOSE 9999
+
+# starts script definded in package.json (>node index.js)
+CMD npm run app

@@ -1,5 +1,9 @@
-const app = require("express")();
+const app = require('express')();
 
-app.get("/", (req, res) => res.send("Hello from the container world"))
+app.get('/', (req, res ) => 
+    res.json({ message: 'Docker is easy 🐳' }) 
+);
 
-app.listen(9999, () => console.log("listing on port 9999"))
+const port = process.env.PORT || 8080;
+
+app.listen(port, () => console.log(`app listening on http://localhost:${port}`) );
