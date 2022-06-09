@@ -1,9 +1,9 @@
 # base image from node
 FROM node:18
 # define working dir 
-WORKDIR /home/node/app
+WORKDIR /app
 # copy app dir to container dir
-COPY app /home/node/app
+COPY app /app
 
 # RUN runs on build, cmd runs on startup of an instance
 
@@ -11,9 +11,9 @@ COPY app /home/node/app
 RUN npm install
 
 
-ENV PORT=9999
-# expose port 9999
-EXPOSE 9999
+ENV PORT=5000
+# expose port 5000
+EXPOSE 5000
 
 # starts script definded in package.json (>node index.js)
 CMD npm run app

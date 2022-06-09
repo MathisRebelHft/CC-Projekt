@@ -10,7 +10,9 @@ Webpage as messaging board?
 
 -simple dockerfile to build and run webapp
 
--docker-compose for web and db and a shared volume
+-docker-compose for web
+
+-Proxy for roundrobin disrubution of traffic
 
 ## To Be Done
 
@@ -18,21 +20,27 @@ Webpage as messaging board?
 
 -Web functionality
 
--Proxy for roundrobin disrubution of traffic
-
 -Devtools like Performance Observer
 
 -Make web pretty
 
 ## how to use
 
-start containers:
+start service:
 
     docker-compose up
 
-stop container:
+service availible on:
+
+    http://localhost:4000
+
+stop service:
 
     docker-compose down
+
+remove remaining services
+
+    docker-compose down --remove-orphans
 
 ## old
 
@@ -42,7 +50,7 @@ build image with the name nodeapp (use docker images to confirm)
 
 run image nodeapp as instance with name nodeapptest and route Port 9999 from instance to 8080 on localhost
 
-    docker run --name nodeapptest -p 8080:9999 
+    docker run --name nodeapptest -p 8080:9999 nodeapp
 
 stops the instance (can take a little while)
 

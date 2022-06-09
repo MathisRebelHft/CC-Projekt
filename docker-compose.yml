@@ -1,15 +1,29 @@
 version: '3'
 services:
   web:
-    build: .
-    ports:
-      - "8080:8080"
-  db:
-    image: "mysql"
-    environment: 
-      MYSQL_ROOT_PASSWORD: password
+    image: niceguy420/app:latest
+    environment:
+      - PORT=9999
+   # ports:
+     # - "8080:8080"
+   # depends_on:
+   #   - db
+    expose:
+      - "5000"
+  #db:
+  #  image: "mysql"
+  #  environment: 
+  #    MYSQL_ROOT_PASSWORD: password
+  #  volumes:
+  #    - db-data:/foo
+  nginx:
+    image: nginx:latest
     volumes:
-      - db-data:/foo
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - web
+    ports:
+      - "4000:4000"
 
 volumes:
   db-data:
