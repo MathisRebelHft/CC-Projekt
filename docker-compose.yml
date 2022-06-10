@@ -2,21 +2,24 @@ version: '3'
 services:
   web:
     image: niceguy420/app:latest
-    environment:
-      - PORT=9999
-   # ports:
-     # - "8080:8080"
-   # depends_on:
-   #   - db
-    expose:
-      - "5000"
-  #db:
-  #  image: "mysql"
-  #  environment: 
-  #    MYSQL_ROOT_PASSWORD: password
-  #  volumes:
-  #    - db-data:/foo
+    container_name: web
+    #restart: always
+    build: .
+    ports:
+      - '80:5000'
+    external_links:
+      - mongo
+
+  mongo:
+    container_name: mongo
+    image: mongo
+    ports:
+      - '27017:27017'
+    volumes:
+      - db-data:/foo
+
   nginx:
+    container_name: loadbalancer
     image: nginx:latest
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
