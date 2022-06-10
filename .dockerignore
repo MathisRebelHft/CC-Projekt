@@ -1,2 +1,2 @@
 # doesnt copy node_modules in dockerfile
-*/node_modules
+#*/node_modules
