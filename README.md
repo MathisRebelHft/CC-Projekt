@@ -14,11 +14,11 @@ Webpage as messaging board?
 
 -Proxy for roundrobin disrubution of traffic
 
-## To Be Done
-
 -Communication between db and web 
 
 -Web functionality
+
+## To Be Done
 
 -Devtools like Performance Observer
 
