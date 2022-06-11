@@ -6,11 +6,11 @@ Webpage as messaging board?
 ## Done
 -simple webapp with nodejs
 
--simple db image with mySQL
+-simple db image with MongoDB
 
 -simple dockerfile to build and run webapp
 
--docker-compose for web
+-docker-compose for web, db und proxy
 
 -Proxy for roundrobin disrubution of traffic
 
@@ -20,9 +20,13 @@ Webpage as messaging board?
 
 ## To Be Done
 
--Devtools like Performance Observer
+-Devtools like Performance Observer (Use docker desktop)
 
 -Make web pretty
+
+-Do something with volumes?
+
+-User auth?
 
 ## how to use
 

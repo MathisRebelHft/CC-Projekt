@@ -1,12 +1,5 @@
 version: '3'
 services:
-  web:
-    image: niceguy420/app:latest
-    restart: always
-    build: .
-    external_links:
-      - mongo
-    scale: 5
 
   mongo:
     image: mongo
@@ -14,6 +7,17 @@ services:
       - '27017:27017'
     volumes:
       - db-data:/foo
+
+  web:
+    image: niceguy420/app:latest
+    restart: always
+    build: .
+    external_links:
+      - mongo
+    # to start db before web
+    depends_on:
+      - mongo
+    #scale: 5
 
   loadbalancer:
     image: nginx:latest

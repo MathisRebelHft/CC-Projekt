@@ -2,7 +2,7 @@
 FROM node:18
 # define working dir 
 WORKDIR /app
-# delete preexisting files
+# delete preexisting files to stop chaching
 RUN rm -rf /app
 # copy app dir to container dir
 COPY app /app
