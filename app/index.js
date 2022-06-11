@@ -15,7 +15,6 @@ const execSync = require('child_process').execSync;
 
 // runs linux command to find ip
 const ipadress = execSync('hostname -I', { encoding: 'utf-8' });  // the default is 'buffer'
-
 // ---------Connect to MongoDB---------------
 mongoose
   .connect(
@@ -29,8 +28,10 @@ const Item = require('./models/Item');
 
 app.get('/', (req, res) => {
   Item.find()
-    .then(items => res.render('index', { items }))
+    .then(items => res.render('index', { items, ipadress : ipadress }))
     .catch(err => res.status(404).json({ msg: 'No items found' }));
+    // test
+    // res.render('index', { myVar : myVar });
 });
 
 app.post('/item/add', (req, res) => {

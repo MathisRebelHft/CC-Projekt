@@ -2,24 +2,20 @@ version: '3'
 services:
   web:
     image: niceguy420/app:latest
-    container_name: web
-    #restart: always
+    restart: always
     build: .
-    ports:
-      - '80:5000'
     external_links:
       - mongo
+    scale: 5
 
   mongo:
-    container_name: mongo
     image: mongo
     ports:
       - '27017:27017'
     volumes:
       - db-data:/foo
 
-  nginx:
-    container_name: loadbalancer
+  loadbalancer:
     image: nginx:latest
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
