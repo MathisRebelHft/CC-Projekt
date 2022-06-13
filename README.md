@@ -24,15 +24,13 @@ Webpage as messaging board?
 
 -Make web pretty
 
--Do something with volumes?
-
 -User auth?
 
 ## how to use
 
 start service:
 
-    docker-compose up
+    docker-compose up -d --build
 
 service availible on:
 
