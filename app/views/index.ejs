@@ -22,7 +22,8 @@
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
     crossorigin="anonymous"></script>
 
-  <h1 class="text-center">Connected to webservice with IP: <%= ipadress %></h1> 
+  <h1 class="text-center">Connected to webservice with IP: <%= ipadress %>
+  </h1>
 
   <div class="container">
     <div class="row align-items-start">
@@ -34,6 +35,13 @@
             <input type="text" name="name">
             <input type="submit" value="Add">
           </form>
+          <button id="myButton" class="float-left submit-button">Crash</button>
+
+          <script type="text/javascript">
+            document.getElementById("myButton").onclick = function () {
+              location.href = "/crash";
+            };
+          </script>
 
         </div>
       </div>
@@ -43,9 +51,9 @@
           <ul class="list-group list-group-flush">
             <% items.forEach(function(item) { %>
               <li class="list-group-item">
-                <%= item.name %>
+                <%= item.ip%> : <%= item.name %>
               </li>
-            <% }); %>
+              <% }); %>
           </ul>
 
         </div>
@@ -57,4 +65,5 @@
 <script type="text/javascript">
   setTimeout(function () { location.reload(true); }, 15000);
 </script>
+
 </html>

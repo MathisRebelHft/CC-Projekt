@@ -17,7 +17,7 @@ services:
     # to start db before web
     depends_on:
       - mongo
-    scale: 5
+    scale: 3
 
   loadbalancer:
     image: nginx:latest
