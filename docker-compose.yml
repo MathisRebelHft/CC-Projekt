@@ -12,8 +12,6 @@ services:
     image: niceguy420/app:latest
     restart: always
     build: .
-    external_links:
-      - mongo
     # to start db before web
     depends_on:
       - mongo
