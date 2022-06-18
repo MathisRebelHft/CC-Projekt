@@ -20,6 +20,7 @@ services:
   loadbalancer:
     image: nginx:latest
     volumes:
+      # copies config into volume and mounts it to etc/nginx as read only
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
     depends_on:
       - web
