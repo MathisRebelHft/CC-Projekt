@@ -3,10 +3,10 @@ services:
 
   mongo:
     image: mongo:latest
-    ports:
-      - '27017:27017'
     volumes:
-      - db-data:/foo
+      - type: volume
+        source: mongodb_data
+        target: /data/db
 
   web:
     image: niceguy420/app:latest
@@ -15,7 +15,7 @@ services:
     # to start db before web
     depends_on:
       - mongo
-    scale: 3
+    scale: 5
 
   loadbalancer:
     image: nginx:latest
@@ -25,7 +25,9 @@ services:
     depends_on:
       - web
     ports:
-      - "4000:4000"
+      - "4000-4001:4000"
+    scale: 2
 
 volumes:
-  db-data:
+  mongodb_data:
+    external: true
