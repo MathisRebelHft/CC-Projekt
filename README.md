@@ -185,7 +185,7 @@ Zu aller Letzt bin ich unzufrieden mit dem Aussehen und manchen Implementierungs
 
 
 
-# ![Untitled Diagram.drawio](C:\Users\mathi\HFT\SS22\CloudComputing\Architektur.drawio.png)
+# ![Architektur.drawio](./Architektur.drawio.png)
 
 # Sourcecode
 
