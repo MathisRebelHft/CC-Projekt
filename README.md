@@ -231,3 +231,4 @@ Github Repository:
 |15.06 | 1:30h | Doku überarbeitet |
 |17.06 | 1:00h | Doku Schaubild, Rechtschreibcheck |
 |18.06 | 3:30h | Code Cleanup, Doku Cleanup, Nginx dockerhub push bug |
+|19.06 | 2:00h | Präsentationsprobe, clean up |
