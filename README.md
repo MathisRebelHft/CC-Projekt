@@ -209,6 +209,8 @@ Zum Beenden:
 
 ``docker-compose down``
 
+Der Webservice ist nun auf Localhost:4000 erreichbar.
+
 # Tätigkeitsnachweis
 
 |Datum | Zeit | Task |
