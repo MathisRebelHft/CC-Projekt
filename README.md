@@ -1,3 +1,17 @@
+# How to use:
+
+Es muss Docker und Docker-compose (Enthalten in Docker Desktop für Windows) installiert sein.
+
+Zum Starten (Bei ersten Start existiert mongodb_data noch nicht, erstelle das Volumen mit ``$ docker volume create --name=mongodb_data`` ):
+
+ ``docker-compose up``
+
+Zum Beenden:
+
+``docker-compose down``
+
+Der Webservice ist nun auf Localhost:4000 erreichbar.
+
 # Motivation
 
 Ich möchte den Umgang mit Docker lernen und stelle mir deshalb mit Absicht eine einfache Aufgabe, die ich selber schon mehrfach mit verschiedenen Technologien umgesetzt habe. Dadurch lerne ich Schritt für Schritt Features von Docker kennen. 
@@ -197,19 +211,6 @@ Github Repository:
 
 ​	https://github.com/MathisRebelHft/CC-Projekt.git
 
-How to use:
-
-Es muss Docker und Docker-compose (Enthalten in Docker Desktop für Windows) installiert sein.
-
-Zum Starten (Bei ersten Start existiert mongodb_data noch nicht, erstelle das Volumen mit ``$ docker volume create --name=mongodb_data`` ):
-
- ``docker-compose up``
-
-Zum Beenden:
-
-``docker-compose down``
-
-Der Webservice ist nun auf Localhost:4000 erreichbar.
 
 # Tätigkeitsnachweis
 
