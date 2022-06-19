@@ -199,6 +199,8 @@ Github Repository:
 
 How to use:
 
+Es muss Docker und Docker-compose (Enthalten in Docker Desktop für Windows) installiert sein.
+
 Zum Starten (Bei ersten Start existiert mongodb_data noch nicht, erstelle das Volumen mit ``$ docker volume create --name=mongodb_data`` ):
 
  ``docker-compose up``
