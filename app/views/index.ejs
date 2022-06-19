@@ -31,17 +31,17 @@
         <div class="container">
           <!-- inputform-->
           <form method="post" action="/item/add">
-            <label for="name">Name</label>
+            <label for="name"></label>
             <input type="text" name="name">
             <input type="submit" value="Add">
-          </form>
-          <button id="myButton" class="float-left submit-button">Crash</button>
+            <button id="myButton" class="btn btn-danger">Crash</button>
 
           <script type="text/javascript">
             document.getElementById("myButton").onclick = function () {
               location.href = "/crash";
             };
           </script>
+          </form>
 
         </div>
       </div>
