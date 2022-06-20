@@ -1,3 +1,11 @@
+#### Projektarbeit Cloud-Computing
+
+#### Thema: Website mit Docker Container
+
+#### Mathis Rebel | https://github.com/MathisRebelHft/CC-Projekt
+
+Bitte Doku auf Github lesen, sie ist dort besser formatiert.
+
 # How to use:
 
 Es muss Docker und Docker-compose (Enthalten in Docker Desktop für Windows) installiert sein.
@@ -207,11 +215,11 @@ Zu aller Letzt bin ich unzufrieden mit dem Aussehen und manchen Implementierungs
 
 DockerHub Repository: 
 
-​	niceguy420/app 
+niceguy420/app 
 
 Github Repository:
 
-​	https://github.com/MathisRebelHft/CC-Projekt.git
+https://github.com/MathisRebelHft/CC-Projekt.git
 
 
 # Tätigkeitsnachweis
